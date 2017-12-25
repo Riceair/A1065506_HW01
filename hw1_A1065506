@@ -1,0 +1,31 @@
+//hw1_A1065506
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int a = 3; //指定a變數為整數3
+	float b = 5.5; //指定b變數為浮點數5.5
+	//將a與b兩變數做四則運算，並以整數輸出
+	printf("%d\n", a + b);
+	printf("%d\n", a - b);
+	printf("%d\n", a * b);
+	printf("%d\n", a / b);
+	//將a與b兩變數做四則運算，並以浮點數輸出
+	printf("%f\n", a + b);
+	printf("%f\n", a - b);
+	printf("%f\n", a * b);
+	printf("%f\n", a / b);
+
+	system("PAUSE");
+	return 0;
+}
+	/*若以整數輸出的話，結果除了a /b的結果是390451572之外
+	  ，其他的結果都是0，而用浮點數輸出的話結果則是出現小
+	  數點後六位的正確答案。我認為造成這樣的結果是因為計算
+	  結果是浮點數，而浮點數的型別比整數還大，所以整數型別
+	  輸出不了正確答案，而以浮點數輸出的話，因為C語言為了方
+	  便，在做算數運算時會自動將等號右邊"型別比較小"的數值
+	  轉成"型別比較大"的數值，再加上是以浮點數輸出，所以才
+	  會有正解。*/
+	//參考網站http://programming.im.ncnu.edu.tw/Chapter5.htm
